@@ -20,7 +20,9 @@ export const test = () => {
 
 	//問題：引数に文字列の配列を受け取り、その中身の順番を逆にして返す関数を作成する
 	// 例：reverseArray["a", "b", "c"] => ["c", "b", "a"]
-	const reverseArray = (arr: string[]): string[] => {
+	// 実際にデータ型を定義してみよう：変数、引数、返り値
+	// オプション引数
+	const reverseArray = (arr: string[], hasTom?: boolean): string[] => {
 		const reversedArray: string[] = [];
 
 		let index: number = arr.length - 1;
@@ -28,10 +30,14 @@ export const test = () => {
 			reversedArray.push(arr[index]);
 			index--;
 		}
+
+		if (hasTom) {
+			reversedArray.push("Tom");
+		}
 		return reversedArray;
 	};
 
-	console.log(reverseArray(["a", "b", "c"]));
+	console.log(reverseArray(["a", "b", "c"], true));
 
 	const reverseArray2 = (arr: string[]): string[] => {
 		return arr.reverse();
