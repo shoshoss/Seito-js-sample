@@ -52,19 +52,31 @@ export const test = () => {
 		isActive: true,
 	};
 
-	interface UserProps {
+	// interface UserProps {
+	// 	userId: number;
+	// 	name: string;
+	// 	age: number;
+	// 	email: string;
+	// 	isActive: boolean;
+	// }
+
+	// interface AdminUserProps extends UserProps {
+	// 	role: string; //"admin", "leader", "manager"
+	// }
+
+	type UserProps = {
 		userId: number;
 		name: string;
 		age: number;
 		email: string;
 		isActive: boolean;
-	}
+	};
 
-	interface AdminUser extends UserProps {
+	type AdminUserProps = UserProps & {
 		role: string; //"admin", "leader", "manager"
-	}
+	};
 
-	const createAccount = (accountInfo: AdminUser) => {
+	const createAccount = (accountInfo: AdminUserProps) => {
 		//
 	};
 
