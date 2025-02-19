@@ -75,39 +75,44 @@ export const test = () => {
 	// 	isActive: true,
 	// 	role: "admin",
 	// });
-
-	class User {
-		userId: number;
-		name: string;
-		age: number;
-		email: string;
-		isActive: boolean;
-
-		constructor(
-			userId: number,
-			name: string,
-			age: number,
-			email: string,
-			isActive: boolean
-		) {
-			this.userId = userId;
-			this.name = name;
-			this.age = age;
-			this.email = email;
-			this.isActive = isActive;
-		}
-
-		private getProfile(): string {
-			return `Name: ${this.name}, Age: ${this.age}`;
-		}
-
-		static sayHelloWord(): void {
-			console.log("Hello World");
-		}
-	}
-
-	const user = new User(1, "Mike", 25, "mike@gmail.com", true);
-	User.sayHelloWord();
+	// class User {
+	// 	userId: number;
+	// 	name: string;
+	// 	age: number;
+	// 	email: string;
+	// 	isActive: boolean;
+	// 	constructor(
+	// 		userId: number,
+	// 		name: string,
+	// 		age: number,
+	// 		email: string,
+	// 		isActive: boolean
+	// 	) {
+	// 		this.userId = userId;
+	// 		this.name = name;
+	// 		this.age = age;
+	// 		this.email = email;
+	// 		this.isActive = isActive;
+	// 	}
+	// 	private getProfile(): string {
+	// 		return `Name: ${this.name}, Age: ${this.age}`;
+	// 	}
+	// 	static sayHelloWord(): void {
+	// 		console.log("Hello World");
+	// 	}
+	// }
+	// const user = new User(1, "Mike", 25, "mike@gmail.com", true);
+	// User.sayHelloWord();
 	// user.getProfile();
 	// public, private, protected
+
+	// const foo = (arg: string): string => {
+	// 	return arg;
+	// };
+
+  const foo = <T>(arg: T) T => {
+    return arg;
+  }
+
+  foo<string>("Hello World")
 };
