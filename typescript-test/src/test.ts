@@ -97,12 +97,17 @@ export const test = () => {
 			this.isActive = isActive;
 		}
 
-		public getProfile(): string {
+		private getProfile(): string {
 			return `Name: ${this.name}, Age: ${this.age}`;
+		}
+
+		static sayHelloWord(): void {
+			console.log("Hello World");
 		}
 	}
 
 	const user = new User(1, "Mike", 25, "mike@gmail.com", true);
-	user.getProfile();
+	User.sayHelloWord();
+	// user.getProfile();
 	// public, private, protected
 };
